@@ -1,0 +1,93 @@
+// * font mixins *
+
+@mixin font($name, $size, $color: $white) {
+  color: $color;
+  font-family: $name;
+  font-size: $size;
+};
+
+@mixin section-ending($after-color, $before-color) {
+
+  &::after {
+    background-color: $after-color;
+    content: " ";
+    display: block;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    width: $angle-after-size;
+    z-index: 2;
+  }
+
+  &::before {
+    border-left: 30px solid $before-color;
+    border-top: 30px solid transparent;
+    bottom: -30px;
+    content: " ";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: $angle-before-position;
+    width: 0;
+    z-index: 3;
+  }
+};
+
+$breakpoints-map: (
+  medium: 992px,
+  small: 768px,
+  xsmall: 480px,
+  xxsmall: 320px
+);
+
+@mixin max-respond-to($breakpoint) {
+  $value: map-get($breakpoints-map, $breakpoint);
+  @media screen and (max-width: $value) {
+    @content
+  }
+};
+
+@mixin min-respond-to($breakpoint) {
+  $value: map-get($breakpoints-map, $breakpoint);
+  @media screen and (min-width: #{$value}) {
+    @content
+  }
+};
+
+// Large desktops and laptops
+@media (min-width: 1200px) {
+
+}
+
+// Landscape tablets and medium desktops
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+// Portrait tablets and small desktops
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+// Landscape phones and portrait tablets
+@media (max-width: 767px) {
+
+}
+
+// Portrait phones and smaller
+@media (max-width: 480px) {
+
+}
+
+// Iphone 5
+@media (max-width: 320px) {
+
+}
+
+
+// @mixin title-underline-after() {
+//   content: " ";
+//   display: block;
+//   position: absolute;
+//
+// }

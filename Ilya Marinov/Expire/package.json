@@ -1,0 +1,28 @@
+{
+  "name": "Expire",
+  "version": "1.0.0",
+  "main": "Gulpfile.js",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-change": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.2.0",
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.11.1"
+  },
+  "scripts": {
+    "start": "gulp",
+    "lint": "sass-lint -v",
+    "lint:fix": "sass-lint-auto-fix -c .sass-lint.yml",
+    "htmlhint": "htmlhint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "reset-css": "^4.0.1"
+  }
+}

@@ -1,0 +1,9 @@
+<div class="home__wrapper">
+  <h1 class="home__user">User : {{user}}</h1>
+  <h1 class="home__title">{{title}}</h1>
+  {{#each menu}}
+  <button type="button" name="button" class="home__button {{class}}" data-page="{{data}}">
+    {{item}}
+  </button>
+  {{/each}}
+</div>

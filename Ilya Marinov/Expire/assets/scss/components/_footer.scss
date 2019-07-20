@@ -1,0 +1,62 @@
+footer {
+  background-color: $black;
+  border-top: 1px solid $footer-border;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px 135px;
+
+  &-menu {
+    align-items: center;
+    display: flex;
+    margin-right: 300px;
+
+    &-item {
+      color: $font-white;
+
+      a {
+        color: $font-white;
+        text-decoration: none;
+
+        &:hover {
+          color: $font-red;
+          cursor: pointer;
+        }
+      }
+
+      .expire-logo {
+
+        .logo-text {
+          @include font($raleway-light, 32px, $font-white);
+        }
+      }
+
+      .copyright-text {
+        @include font($opensans-light, 14px, $white-gray);
+      }
+    }
+  }
+
+  &-social-icons {
+    font-size: 22px;
+    margin: 0 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-logo {
+    flex-basis: 100px;
+    margin-right: 300px;
+    text-align: center;
+  }
+}

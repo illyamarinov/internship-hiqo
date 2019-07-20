@@ -1,0 +1,53 @@
+.paralax {
+  background-color: $paralax-bgcolor;
+  position: relative;
+
+  &-content {
+    box-sizing: border-box;
+    padding: 125px 235px 98px;
+    position: relative;
+    width: $width-default;
+  }
+
+  &-title {
+    margin-bottom: 83px;
+    text-align: center;
+
+    .title-h3 {
+      @include font($raleway-semibold, 45.29px, $font-white);
+
+      &::after {
+        background: $white;
+        left: calc(50% - 50px);
+      }
+    }
+
+    .title-description {
+      @include font($opensans, 18px, $font-white);
+    }
+  }
+
+  &-quote {
+    padding: 0 56px;
+    position: relative;
+
+    &-symbol {
+      @include font("Times New Roman", 150px);
+      color: $paralax-quote-color;
+      left: 12px;
+      letter-spacing: -10px;
+      position: absolute;
+      top: -40px;
+    }
+
+    &-content {
+      @include font($opensans-light-italic, 30px, $font-white);
+      line-height: 40px;
+      margin-bottom: 44px;
+    }
+
+    &-author {
+      @include font($opensans-light, 30px, $font-white);
+    }
+  }
+}

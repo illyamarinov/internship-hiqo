@@ -1,0 +1,148 @@
+.latest-blog {
+  background-color: $about-bgcolor;
+
+  .latest-content {
+    padding: 96px 0 98px;
+  }
+
+  &-title {
+    min-height: 234px;
+    text-align: center;
+
+    .title-h3 {
+
+      &::after {
+        bottom: 10px;
+        left: calc(50% - 50px);
+      }
+    }
+
+    .title-description {
+      line-height: 25px;
+      padding-top: 8px;
+    }
+  }
+}
+
+.latest-slider-navigation {
+  display: flex;
+
+  .latest-slider-arrow-left {
+    font-size: 44px;
+    padding-right: 60px;
+    padding-top: 247px;
+  }
+
+  .latest-slider-arrow-right {
+    font-size: 44px;
+    padding-left: 60px;
+    padding-top: 247px;
+  }
+
+  .latest-slider-posts {
+    display: flex;
+    min-height: 610px;
+  }
+
+  .latest-slider-post {
+    min-width: 370px;
+
+    &-content {
+      border: 1px solid $white-gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 308px;
+      padding: 20px 27px 36px;
+
+      .post-title {
+        @include font($raleway-regular, 25px, $font-black);
+        line-height: 28px;
+
+        &:hover {
+          color: $font-red;
+          cursor: pointer;
+        }
+      }
+
+      .afterline {
+        background: $white-gray;
+        border: 0;
+        height: 1px;
+        margin-bottom: 16px;
+        width: $width-default;
+      }
+
+      .post-description {
+        @include font($opensans, 14px, $font-black);
+
+        i {
+          color: $font-red;
+          margin: 0 10px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      .post-text {
+        @include font($opensans, 14px, $font-light-gray);
+        flex-grow: 1;
+        line-height: 25px;
+        margin: 20px 0;
+      }
+
+      .post-button {
+        @include font($raleway-semibold, 15.71px, $font-red);
+        align-self: flex-start;
+        background: none;
+        border: 1px solid $font-red;
+        line-height: 17.68px;
+        padding: 14px 27px;
+        text-transform: uppercase;
+
+        &:hover {
+          background: $font-red;
+          color: $font-white;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &-frame {
+      background-color: $pure-gray;
+      min-height: 244px;
+      position: relative;
+
+      &::after {
+        border-left: 36px solid transparent;
+        border-top: 36px solid $white;
+        content: " ";
+        display: block;
+        height: 0;
+        left: $angle-before-position;
+        position: absolute;
+        top: 0;
+        width: 0;
+        z-index: 10;
+      }
+
+      &::before {
+        background: $white;
+        content: " ";
+        display: block;
+        height: 36px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: calc(50% - 21px);
+        z-index: 10;
+      }
+    }
+  }
+}

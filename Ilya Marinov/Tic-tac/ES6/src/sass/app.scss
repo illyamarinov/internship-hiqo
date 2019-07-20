@@ -1,0 +1,104 @@
+@import "./node_modules/reset-css/sass/_reset.scss";
+@import "./common/fonts.scss";
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+ outline: none;
+}
+
+body {
+  background-image: url('../assets/img/teaching2.jpg');
+  background-size: cover;
+  font-family: "Permanent Marker";
+  font-weight: normal;
+  font-style: normal;
+  background-attachment: fixed;
+  // overflow: hidden;
+}
+
+button,
+input,
+label {
+  font-family: "Permanent Marker";
+}
+
+#app {
+  padding: 0 135px;
+  transition: transform 0.6s ease-in-out;
+  position: relative;
+
+  & .back-to-menu {
+    position: absolute;
+    right: 5%;
+    top: 85%;
+    height: 50px;
+    width: 230px;
+    font-size: 30px;
+    background: 0;
+    border: 0;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  & .game-status {
+    position: absolute;
+    left: 5%;
+    top: 85%;
+    width: 375px;
+    font-size: 30px;
+    color: black;
+
+    &:hover {
+      cursor: default;
+      color: white;
+    }
+  }
+}
+
+.field-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30% auto 10%;
+}
+
+.field-cell {
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 100px;
+  height: 100px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+
+  &-last-row {
+    border-bottom: 0;
+  }
+
+  &-last-column {
+    border-right: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.field-cell-activated {
+  position: relative;
+
+  &:hover {
+    cursor: default;
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,20 @@
+<header class="scores-header">
+  <div class="scores-header__back" data-page="home">home</div>
+  <h1 class="scores-header__title">{{title}}</h1>
+  <div class="scores-header__clear">Clear</div>
+</header>
+
+<div class="scores-wrapper">
+    <table class="scores-wrapper__table">
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+      {{#each scores}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{score}}</td>
+      </tr>
+      {{/each}}
+    </table>
+</div>

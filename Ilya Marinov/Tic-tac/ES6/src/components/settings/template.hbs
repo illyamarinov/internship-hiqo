@@ -1,0 +1,56 @@
+<header class="settings-header">
+  <div class="settings-header__back" data-page="home">home</div>
+  <h1 class="settings-header__title">{{title}}</h1>
+</header>
+{{#if hint}}
+  <h2 class="settings-header__hint">Successfully saved</h2>
+{{/if}}
+<form class="settings-form" name="settings">
+  <div class="settings-form__player-panel">
+    {{#each form.playersList}}
+      <div class="settings-form__player-panel__player-info">
+        <label for="{{label_id}}">{{label}}</label>
+        <input type="text" id="{{label_id}}" name="player-name" value="{{name}}" maxlength="8" autocomplete="name" />
+        <label for="{{symbol_id}}">Symbol</label>
+        <input type="text" id="{{symbol_id}}" name="player-symbol" value="{{symbol}}" maxlength="1" />
+        <label for="{{color_id}}">Color</label>
+        <input type="color" id="{{color_id}}" name="player-color" value="{{color}}"/>
+      </div>
+    {{/each}}
+  </div>
+  <hr />
+  <div class="settings-form__field-panel">
+    <div class="settings-form__field-panel__size-button">
+      <label for="size-button">Field size</label>
+      <input type="number" id="size-button" name="size-button" value="{{form.fieldSize}}" min="3" max="6" step="1" />
+      <span class="settings-form__field-panel__size-button_validity"></span>
+    </div>
+    <div class="settings-form__field-panel__players-button">
+      <label for="players-button">Players number</label>
+      <select size="1" id="players-button" name="players-button">
+        {{#select form.playersNumb}}
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        {{/select}}
+      </select>
+    </div>
+    <div class="settings-form__field-panel__save-button">
+      <button type="button" name="save-settings">Save</button>
+    </div>
+    <span class="settings-form__field-panel__errors">
+      {{#if errors.symbolRequired}}
+        <span>Symbos is required</span>
+      {{/if}}
+      {{#if errors.symbolUniqueRequired}}
+        <span>Symbol must be unique</span>
+      {{/if}}
+      {{#if errors.nameRequired}}
+        <span>Name is required</span>
+      {{/if}}
+      {{#if errors.nameUniqueRequired}}
+        <span>Name must be unique</span>
+      {{/if}}
+    </span>
+  </div>
+</form>

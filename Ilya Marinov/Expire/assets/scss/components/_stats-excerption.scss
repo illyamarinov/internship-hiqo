@@ -1,0 +1,58 @@
+.stats-excerption {
+  background-color: $stats-bgcolor;
+
+  &-content {
+    box-sizing: border-box;
+    padding: 104px 135px 96px;
+  }
+
+  &-list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 27px;
+
+    &-icon {
+      color: $font-white;
+      font-size: 42px;
+    }
+
+    &-item {
+      @include font($raleway-regular, 40px, $font-white);
+      display: flex;
+      margin-right: 58px;
+      max-width: 270px;
+      width: $width-default;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .ti-user {
+        margin-right: 32px;
+        position: relative;
+      }
+
+      .ti-shopping-cart {
+        margin-right: 32px;
+        position: relative;
+      }
+
+      .ti-comments {
+        margin-right: 32px;
+        position: relative;
+      }
+
+      .ti-files {
+        margin-right: 32px;
+        position: relative;
+      }
+
+      &-title {
+        @include font("Raleway-Light", 25px, $font-white);
+        display: block;
+        margin-top: 30px;
+        width: $width-default;
+      }
+    }
+  }
+}

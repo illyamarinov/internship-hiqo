@@ -1,0 +1,11 @@
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.wrapper {
+  margin: $margin-auto;
+  max-width: $width-expire;
+}

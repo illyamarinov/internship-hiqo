@@ -1,0 +1,64 @@
+header {
+  background-color: $header-bgcolor;
+}
+
+.menu {
+  @include font($raleway-light, 18px, $font-white);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 14px 245px 62px 243px;
+
+  &-item {
+    margin: 0 34px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a:not(.expire-logo) {
+      color: $font-white;
+      padding-bottom: 18px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover:not(.expire-logo)::after {
+        background: $font-underline-toright;
+        bottom: 12px;
+        content: " ";
+        height: 1px;
+        left: -15%;
+        position: absolute;
+        width: 128%;
+      }
+    }
+
+    &:nth-child(4) {
+      flex-basis: 100px;
+      position: relative;
+      text-align: center;
+    }
+  }
+}
+
+.expire-logo {
+  color: $font-white;
+  position: relative;
+  text-decoration: none;
+  top: 9px;
+
+  .logo-img {
+    padding-bottom: 18px;
+  }
+
+  .logo-text {
+    font-size: 32px;
+    position: relative;
+  }
+}

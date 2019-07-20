@@ -1,0 +1,279 @@
+@import "./node_modules/reset-css/sass/_reset.scss";
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+ outline: none;
+}
+
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("../fonts/PermanentMarker-Regular.eot");
+  src: url("../fonts/PermanentMarker-Regular.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/PermanentMarker-Regular.woff2") format("woff2"),
+      url("../fonts/PermanentMarker-Regular.woff") format("woff"),
+      url("../fonts/PermanentMarker-Regular.svg#PermanentMarker-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #14bdac;
+  font-family: "Permanent Marker";
+  font-weight: normal;
+  font-style: normal;
+  overflow: hidden;
+}
+
+button,
+input,
+label {
+  font-family: "Permanent Marker";
+}
+
+.game-menu {
+  margin: 0 auto;
+  padding: 60px 100px;
+  transition: transform 0.6s ease-in-out;
+
+  &-title {
+    font-size: 54px;
+    text-align: center;
+  }
+
+  &-field {
+    position: relative;
+
+    & .button-back {
+      position: absolute;
+      right: 5%;
+      top: 43%;
+      height: 50px;
+      width: 230px;
+      font-size: 30px;
+      background: 0;
+      border: 0;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+
+    & .game-status {
+      position: absolute;
+      left: 0;
+      top: 40%;
+      width: 300px;
+      font-size: 30px;
+      color: white;
+    }
+  }
+}
+
+.field-wrap {
+  background-color: #14bdac;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30% auto 10%;
+}
+
+.field-cell {
+  border-right: 3px solid #108378;
+  border-bottom: 3px solid #108378;
+  width: 100px;
+  height: 100px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-last-row {
+    border-bottom: 0;
+  }
+
+  &-last-column {
+    border-right: 0;
+  }
+
+  &:hover {
+    background-color: #12a294;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+
+.field-cell-activated {
+  position: relative;
+
+  &:hover {
+    cursor: default;
+    opacity: 1;
+  }
+}
+
+.game-menu-settings {
+  text-align: center;
+
+  .start-button {
+    border: 0;
+    background: 0;
+    margin-top: 30px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  & button {
+    font-size: 30px;
+  }
+}
+
+.players {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.player-panel {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 135px;
+  align-items: center;
+  justify-content: center;
+
+  &-info {
+    position: relative;
+    padding: 20px 10px;
+    box-shadow: 4px 3px 0px 1px rgb(0, 0, 0);
+    margin: 10px 20px;
+    width: 170px;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 50px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    & input,
+    label {
+      margin: 5px 10px;
+      font-size: 25px;
+    }
+
+    & input {
+      background: 0;
+      border: 0;
+      border-bottom: 1px solid black;
+      color: white;
+      text-align: center;
+    }
+
+    & input[id*='player-panel-info-name'] {
+      margin: 0 20px 15px;
+      width: 80%;
+    }
+
+    & input[id*='player-panel-info-symbol'] {
+        margin: 0 10px;
+        width: 20px;
+    }
+
+    &-delete {
+      position: absolute;
+      height: 25px;
+      border: 1px solid black;
+      border-radius: 15px;
+      background-color: #14bdac;
+      top: 0;
+      right: 0;
+      width: 25px;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+        border-color: white;
+      }
+    }
+  }
+
+  &-add {
+    order: 1;
+    & button {
+      background: 0;
+      border: 0;
+      font-size: 65px;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+}
+
+.field-panel {
+  display: flex;
+  padding: 20px 250px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+
+  div {
+    margin: 0 30px;
+  }
+
+  &-config {
+
+    & label,button {
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+
+    & button {
+      font-size: 30px;
+      border: 0;
+      background: 0;
+      height: 100%;
+    }
+  }
+
+  &-size {
+
+    input {
+      border: 0;
+      text-align: center;
+      border-bottom: 1px solid black;
+      color: white;
+      background: 0;
+      font-size: 30px;
+    }
+
+    input:invalid + span:after {
+      content: 'X';
+      color: red;
+      padding-left: 5px;
+    }
+
+    input:valid + span:after {
+      content: '✓';
+      color: green;
+      padding-left: 5px;
+    }
+  }
+}
+
+hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  width: 60%;
+}

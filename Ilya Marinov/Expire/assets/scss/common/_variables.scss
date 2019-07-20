@@ -1,0 +1,113 @@
+// ** var colors **
+
+$white: #fff;
+$light-gray: #4e5860;
+$lighter-gray: #484c55;
+$gray: #3d4148;
+$pure-gray: #656d78;
+$dark-gray: #272d32;
+$black: #303030;
+$red: #ff3c1f;
+$light-red: #d14b3a;
+$white-gray: #e6e9ed;
+$pure-gray: #656d7a;
+$slate-gray: #6d747f;
+$slater-gray: #656d78;
+
+//  background of sections
+
+$header-bgcolor: $gray;
+$about-bgcolor: $white;
+$paralax-bgcolor: $light-red;
+$stats-bgcolor: $pure-gray;
+$portfolio-border: #b1b8c4;
+$partners-bgcolor: $white;
+$footer-border: #fcfdfc;
+
+//  fonts
+
+$font-white: $white;
+$font-gray: $gray;
+$font-dark-gray: $dark-gray;
+$font-light-gray: $light-gray;
+$font-red: $red;
+$font-light-red: $light-red;
+$font-black: $black;
+
+//  forms
+
+$button-red: $red;
+$button-white: $white;
+
+$dots-border-hover: #abb3c0;
+$arrow-gray: #7e8085;
+
+$article-frame-light-gray: #aab2bd;
+
+$slider-button-left: linear-gradient(to right, $lighter-gray 0%, $lighter-gray 0%, $lighter-gray 54%, $gray 100%);
+
+$slider-button: linear-gradient(to right, $gray 0%, $lighter-gray 33%, $lighter-gray 66%, $gray 100%);
+
+$slider-button-right: linear-gradient(to left, $lighter-gray 0%, $lighter-gray 0%, $lighter-gray 54%, $gray 100%);
+
+$paralax-quote-color: rgba($white, .2);
+
+$portfolio-panel: rgba($white, .8);
+$portfolio-layer: rgba($black, .75);
+
+//  underline :before :after
+
+$font-underline-toright: linear-gradient(to right, $black 5%, $red 100%);
+$font-underline-toleft: linear-gradient(to left, $black 5%, $red 100%);
+
+// ** var size **
+
+//  common
+$width-default: 100%;
+$height-default: 100%;
+
+//  section
+$width-expire: 1440px;
+
+$margin-auto: 0 auto;
+$padding-rl: 135px;
+
+//  fonts
+
+$font-h1-size: 45px;
+
+// angles ::before ::after
+
+$angle-after-size: calc(50% + 15px);
+$angle-before-position: calc(50% - 15px);
+
+// ** var fonts **
+$opensans: "OpenSans";
+$opensans-bold: "OpenSans-Bold";
+$opensans-italic: "OpenSans-Italic";
+$opensans-light: "OpenSans-Light";
+$opensans-bold-italic: "OpenSans-BoldItalic";
+$opensans-light-italic: "OpenSansLight-Italic";
+$opensans-semibold: "OpenSans-SemiBold";
+$opensans-semibold-italic: "OpenSans-SemiBoldItalic";
+$opensans-extrabold: "OpenSans-ExtraBold";
+$opensans-extrabold-italic: "OpenSans-ExtraBoldItalic";
+
+$raleway-regular: "Raleway-Regular";
+$raleway-italic: "Raleway-Italic";
+$raleway-bold: "Raleway-Bold";
+$raleway-bold-italic: "Raleway-BoldItalic";
+$raleway-semibold: "Raleway-SemiBold";
+$raleway-semibold-italic: "Raleway-SemiBoldItalic";
+$raleway-light: "Raleway-Light";
+$raleway-light-italic: "Raleway-LightItalic";
+$raleway-extrabold: "Raleway-ExtraBold";
+$raleway-extrabold-italic: "Raleway-ExtraBoldItalic";
+$raleway-extralight: "Raleway-ExtraLight";
+$raleway-extralight-italic: "Raleway-ExtraLightItalic";
+$raleway-black: "Raleway-Black";
+$raleway-black-italic: "Raleway-BlackItalic";
+$raleway-medium: "Raleway-Medium";
+$raleway-medium-italic: "Raleway-MediumItalic";
+$raleway-thin: "Raleway-Thin";
+$raleway-thin-italic: "Raleway-ThinItalic";

@@ -1,0 +1,137 @@
+.slider {
+  @include section-ending($header-bgcolor, $about-bgcolor);
+  background-color: $header-bgcolor;
+  position: relative;
+
+  &-navigation {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  &-arrows:hover {
+    background: $slider-button;
+  }
+
+  &-item {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 128px 34px;
+    width: $width-default;
+
+    & + .slider-item {
+      display: none;
+    }
+  }
+
+  &-title {
+    @include font($raleway-semibold, 70px, $font-white);
+    box-sizing: border-box;
+    padding-bottom: 62px;
+    position: relative;
+    width: $width-default;
+
+    &::after {
+      background-image: url("../img/line.png");
+      background-repeat: no-repeat;
+      bottom: 20px;
+      content: " ";
+      display: block;
+      height: 10px;
+      left: 5px;
+      position: absolute;
+      width: 200px;
+    }
+  }
+
+  &-description {
+    @include font($raleway-light, 50px, $font-white);
+    box-sizing: border-box;
+    line-height: 64px;
+    max-width: 920px;
+    padding-bottom: 59px;
+  }
+
+  &-buttons {
+
+    button {
+      @include font($raleway-semibold, 15.71px, $font-red);
+      background: none;
+      border: 1px solid;
+      margin: 0 10px;
+      padding: 15px;
+      text-transform: uppercase;
+      width: 150px;
+    }
+
+    .button-explore {
+      color: $button-red;
+      margin-left: 0;
+
+      &:hover {
+        background: $button-red;
+        border-color: $button-red;
+        color: $button-white;
+        cursor: pointer;
+      }
+    }
+
+    .button-learn {
+      color: $button-white;
+      margin-right: 0;
+
+      &:hover {
+        background: $button-white;
+        border-color: $button-white;
+        color: $font-gray;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.ti-angle-left,
+.ti-angle-right {
+  box-sizing: border-box;
+  color: $arrow-gray;
+  font-size: 32px;
+  padding: 258px 33px 348px;
+  position: relative;
+
+  &:hover {
+    color: $button-red;
+    cursor: pointer;
+  }
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+  width: $width-default;
+}
+
+.dot {
+  border: 1px solid $font-white;
+  height: 20px;
+  margin: 0 8px;
+  width: 20px;
+
+  &:hover {
+    background: $font-white;
+    border: 1px solid $dots-border-hover;
+    cursor: pointer;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.dot-active {
+  background: $font-white;
+}

@@ -1,0 +1,33 @@
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 50px 0 25px;
+  font-size: 40px;
+  position: relative;
+  color: white;
+
+  &__back {
+    color: black;
+    position: absolute;
+    background: white;
+    left: 10%;
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 2px 7px 8px;
+    border-radius: 18px;
+    box-shadow: 4px 3px 0px 1px black;
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+      border-color: black;
+      border: 1px solid black;
+      box-shadow: none;
+      left: 10.5%;
+      top: 55px;
+      // box-shadow: inset 4px 3px 0px 1px black;
+    }
+  }
+}

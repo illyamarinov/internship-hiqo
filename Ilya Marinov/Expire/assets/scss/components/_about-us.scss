@@ -1,0 +1,153 @@
+.about {
+  @include section-ending($about-bgcolor, $paralax-bgcolor);
+  background-color: $about-bgcolor;
+  position: relative;
+  width: $width-default;
+
+  &-content {
+    box-sizing: border-box;
+    padding: 124px 135px 100px;
+    position: relative;
+  }
+
+  &-title {
+    padding-bottom: 70px;
+  }
+
+  &-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-item {
+    margin: 0 15px;
+    min-width: 270px;
+    width: 25%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 274px;
+
+    h4 {
+      @include font($opensans, 28px, $font-gray);
+      flex-grow: 1;
+      line-height: 40px;
+    }
+
+    &-button {
+      @include font($raleway-semibold, 16px, $font-white);
+      background: $button-red;
+      border: 1px solid;
+      margin-right: 30px;
+      padding: 14px 21px;
+      text-transform: uppercase;
+
+      &:hover {
+        background: $button-white;
+        border: 1px solid $button-red;
+        color: $button-red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-article-frame {
+    border: 1px solid $article-frame-light-gray;
+    margin-top: 32px;
+    position: relative;
+
+    &::before {
+      background: $white;
+      border-left: 1px solid $article-frame-light-gray;
+      border-top: 1px solid $article-frame-light-gray;
+      content: " ";
+      display: block;
+      height: 27px;
+      left: -1px;
+      position: absolute;
+      top: -27px;
+      width: $angle-before-position;
+      z-index: 9;
+    }
+
+    &::after {
+      border-bottom: 25px solid $article-frame-light-gray;
+      border-right: 25px solid transparent;
+      content: " ";
+      display: block;
+      height: 0;
+      left: $angle-before-position;
+      position: absolute;
+      top: -26px;
+      width: 0;
+      z-index: 10;
+    }
+  }
+
+  &-articles {
+    padding: 0 20px 28px;
+    position: relative;
+
+    h5 {
+      @include font($opensans-bold, 20px, $font-black);
+      padding-bottom: 20px;
+      text-transform: uppercase;
+
+      i {
+        color: $article-frame-light-gray;
+        font-size: 44px;
+        padding-right: 12px;
+      }
+    }
+
+    p {
+      @include font($opensans, 14px, $font-light-gray);
+      line-height: 25px;
+      padding-left: 4px;
+    }
+
+    &::before {
+      border-bottom: 30px solid $white;
+      border-right: 30px solid transparent;
+      content: " ";
+      display: block;
+      height: 0;
+      left: $angle-before-position;
+      position: absolute;
+      top: -25px;
+      width: 0;
+      z-index: 11;
+    }
+  }
+}
+
+.title-h3 {
+  @include font($raleway-semibold, 45px, $font-dark-gray);
+  padding-bottom: 38px;
+  position: relative;
+
+  &::after {
+    background: $font-underline-toleft;
+    bottom: 20px;
+    content: " ";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100px;
+  }
+}
+
+.title-description {
+  @include font($opensans, 18px, $font-light-gray);
+}

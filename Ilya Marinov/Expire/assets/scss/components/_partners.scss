@@ -1,0 +1,20 @@
+.partners {
+  background-color: $partners-bgcolor;
+  width: $width-default;
+
+  &-content {
+    box-sizing: border-box;
+    padding: 108px 135px;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+    &-item {
+      border: 1px solid $white-gray;
+      padding: 39px 14px;
+    }
+  }
+}

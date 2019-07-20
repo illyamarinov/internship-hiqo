@@ -1,0 +1,142 @@
+.auth__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  color: white;
+}
+
+.auth__title {
+  padding: 100px 0 25px;
+  font-size: 55px;
+}
+
+.auth__error {
+  color: red;
+  opacity: 0.6;
+  min-height: 25px;
+  font-size: 25px;
+  padding-bottom: 50px;
+}
+
+.auth__forms {
+  display: flex;
+  max-width: 400px;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  & form {
+    display: none;
+    padding: 20px 30px;
+    box-shadow: 4px 3px 0 1px rgb(0, 0, 0);
+    border: 1px solid black;
+    border-top: 0;
+    border-radius: 50px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 80px;
+
+    & input {
+      background: 0;
+      border: 0;
+      box-shadow: 0 2px 0 0 black;
+      margin: 15px 0;
+      font-size: 25px;
+    }
+
+    ::-webkit-input-placeholder {
+      color: white;
+      opacity: 0.7;
+    }
+  }
+}
+
+.auth__button_sign-up,
+.auth__button_sign-in {
+  font-size: 40px;
+  background: 0;
+  border: 0;
+  margin: 15px 50px;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+input[type="radio"] {
+	display:none;
+}
+
+label[for="sign-in-tab"],
+label[for="sign-up-tab"] {
+  position: relative;
+  margin: 0 1px;
+  top: 1px;
+	display: inline-block;
+  border: 1px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 50px;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+	padding: 14px 52px;
+  font-size: 18px;
+  color: black;
+  box-shadow: 4px 0 0 0 rgb(0, 0, 0);
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+label[for="sign-in-tab"] {
+  border-top-right-radius: 50px;
+}
+
+label[for="sign-up-tab"] {
+  border-top-left-radius: 50px;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 5px;
+    right: -5px;
+    bottom: -3px;
+    background: black;
+    position: absolute;
+  }
+}
+
+#sign-in-tab:checked ~ label[for="sign-in-tab"],
+#sign-up-tab:checked ~ label[for="sign-up-tab"] {
+  color: black;
+  cursor:default;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#sign-in-tab:checked ~ label[for="sign-in-tab"] {
+  border-bottom: 0;
+}
+
+#sign-up-tab:checked ~ label[for="sign-up-tab"] {
+  border-bottom: 0;
+}
+
+#sign-in-tab:checked ~ .auth__forms_sign-in,
+#sign-up-tab:checked ~ .auth__forms_sign-up {
+  display: flex;
+  background: rgba(0, 0, 0, 0.1);
+}

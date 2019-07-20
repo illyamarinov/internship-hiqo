@@ -1,0 +1,224 @@
+.newgame-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 50px 0 25px;
+  font-size: 40px;
+  position: relative;
+  color: white;
+
+  &__back {
+    color: black;
+    position: absolute;
+    background: white;
+    left: 10%;
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 2px 7px 8px;
+    border-radius: 18px;
+    box-shadow: 4px 3px 0px 1px black;
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+      border-color: black;
+      border: 1px solid black;
+      box-shadow: none;
+      left: 10.5%;
+      top: 55px;
+      // box-shadow: inset 4px 3px 0px 1px black;
+
+    }
+  }
+}
+
+.newgame-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 135px 100px;
+  position: relative;
+
+  & button {
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 50px;
+    box-shadow: 6px 5px 0px 1px black;
+    background: 0;
+    font-size: 30px;
+    padding: 20px;
+    margin: 0 60px;
+    top: 50%;
+
+    &:hover {
+      border: 1px solid black;
+      cursor: pointer;
+      box-shadow: none;
+    }
+  }
+
+  & button:nth-child(1) {
+    left: 20%;
+
+    &:hover {
+      top: 52%;
+      left: 20.5%;
+    }
+  }
+
+  & button:nth-child(2) {
+    left: 50%;
+
+    &:hover {
+      top: 52%;
+      left: 50.5%;
+    }
+  }
+}
+
+.newgame-form {
+  text-align: center;
+
+  &__player-panel {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 135px;
+    align-items: center;
+    justify-content: center;
+
+    &__player-info {
+      position: relative;
+      padding: 20px 10px;
+      box-shadow: 4px 3px 0px 1px rgb(0, 0, 0);
+      margin: 10px 20px;
+      width: 170px;
+      font-size: 25px;
+      border: 1px solid black;
+      border-radius: 50px;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+
+      & input,
+      label {
+        margin: 5px 10px;
+        font-size: 25px;
+      }
+
+      & input {
+        background: 0;
+        border: 0;
+        box-shadow: 0px 2px 0px 0px black;
+        color: white;
+        text-align: center;
+      }
+
+      & .input_error {
+        box-shadow: 0px 2px 0px 0px red;
+      }
+
+      & input[id*='player-info_name'] {
+        margin: 0 20px 15px;
+        width: 80%;
+      }
+
+      & input[id*='player-info_symbol'] {
+        margin: 0 10px;
+        width: 20px;
+      }
+    }
+
+    &__add-button {
+      order: 1;
+
+      & button {
+        background: 0;
+        border: 0;
+        font-size: 65px;
+
+        &:hover {
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+
+    &__delete-button {
+      position: absolute;
+      height: 25px;
+      border: 2px solid black;
+      border-radius: 15px;
+      background-color: white;
+      top: 0;
+      right: 0;
+      width: 25px;
+
+      &:hover {
+        cursor: pointer;
+        // color: white;
+        border-color: white;
+      }
+    }
+  }
+
+  &__field-panel {
+    display: flex;
+    padding: 20px 250px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+    & div {
+      margin: 0 30px;
+    }
+
+    &__size-button {
+
+      input {
+        border: 0;
+        text-align: center;
+        color: white;
+        background: 0;
+        font-size: 30px;
+      }
+
+      input:invalid + &_validity:after {
+        content: 'X';
+        color: red;
+        padding-left: 5px;
+      }
+
+      input:valid + &_validity:after {
+        content: '✓';
+        color: white;
+        padding-left: 5px;
+      }
+    }
+
+    &__start-button {
+
+      & button {
+        border: 0;
+        background: 0;
+        font-size: 30px;
+
+        &:hover {
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.in-game {
+  transform: translateY(-57%);
+}
+
+hr {
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #000 inset;
+  width: 60%;
+}

@@ -1,0 +1,84 @@
+.scores-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 50px 0 25px;
+  font-size: 40px;
+  position: relative;
+  color: white;
+
+  &__back {
+    color: black;
+    position: absolute;
+    background: white;
+    left: 10%;
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 2px 7px 8px;
+    border-radius: 18px;
+    box-shadow: 4px 3px 0px 1px black;
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+      border-color: black;
+      border: 1px solid black;
+      box-shadow: none;
+      left: 10.5%;
+      top: 55px;
+    }
+  }
+
+  &__clear {
+    color: black;
+    position: absolute;
+    background: white;
+    right: 10%;
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 2px 7px 8px;
+    border-radius: 18px;
+    box-shadow: 4px 3px 0px 1px black;
+
+    &:hover {
+      cursor: pointer;
+      color: black;
+      border-color: black;
+      border: 1px solid black;
+      box-shadow: none;
+      right: 9.5%;
+      top: 55px;
+    }
+  }
+}
+
+.scores-wrapper {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__table {
+    font-size: 30px;
+    text-align: center;
+    width: 70%;
+
+    & td {
+      border-top: 3px solid white;
+      padding: 20px 50px;
+      text-align: left;
+    }
+
+    & th {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 3px solid white;
+    }
+
+    & td:nth-child(1) {
+      border-right: 3px solid white;
+    }
+
+  }
+}

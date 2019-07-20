@@ -1,0 +1,186 @@
+.portfolio {
+  border-bottom: 1px solid $portfolio-border;
+  border-top: 1px solid $portfolio-border;
+  padding-bottom: 1.5px;
+  position: relative;
+
+  &::before {
+    background: $white;
+    border-left: 1px solid $portfolio-border;
+    border-top: 1px solid $portfolio-border;
+    content: " ";
+    display: block;
+    height: 35px;
+    left: -1px;
+    position: absolute;
+    top: -32px;
+    width: $angle-before-position;
+    z-index: 9;
+  }
+
+  &::after {
+    border-bottom: 32px solid $portfolio-border;
+    border-right: 32px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    left: $angle-before-position;
+    position: absolute;
+    top: -32px;
+    width: 0;
+    z-index: 10;
+  }
+
+  &-content {
+    text-align: center;
+
+    &::before {
+      border-bottom: 35px solid $white;
+      border-right: 35px solid transparent;
+      content: " ";
+      display: block;
+      height: 0;
+      left: $angle-before-position;
+      position: absolute;
+      top: -31px;
+      width: 0;
+      z-index: 11;
+    }
+  }
+
+  &-title {
+    padding-bottom: 82px;
+    padding-top: 96px;
+
+    .title-h3::after {
+      bottom: 18px;
+      left: calc(50% - 50px);
+    }
+  }
+
+  &-box {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25%;
+    margin-bottom: 51px;
+    min-height: 480px;
+
+    &-item {
+      border: 0;
+      height: $height-default;
+      position: relative;
+      width: $width-default;
+
+      &:hover {
+
+        .portfolio-box-item-content {
+          display: flex;
+        }
+      }
+
+      &-layer {
+        height: $height-default;
+        left: 0;
+        max-width: 360px;
+        position: absolute;
+        top: 0;
+        width: $width-default;
+        z-index: 1;
+      }
+
+      &-content {
+        background-color: $portfolio-layer;
+        box-sizing: border-box;
+        display: none;
+        flex-direction: column;
+        height: $height-default;
+        justify-content: space-between;
+        padding-top: 46px;
+        position: absolute;
+        width: $width-default;
+        z-index: 2;
+
+        &-title {
+          @include font($opensans-semibold, 20px, $font-white);
+        }
+
+        &-tags {
+          @include font($opensans, 15px, $font-white);
+          flex-grow: 1;
+          padding-top: 23px;
+        }
+
+        &-panel {
+          background-color: $portfolio-panel;
+          font-size: 24px;
+          height: 37px;
+          position: relative;
+
+          &::before {
+            border-bottom: 35px solid $portfolio-panel;
+            border-left: 35px solid transparent;
+            content: " ";
+            display: block;
+            height: 0;
+            position: absolute;
+            right: calc(50% - 18px);
+            top: -35px;
+            width: 0;
+            z-index: 3;
+          }
+
+          &::after {
+            background-color: $portfolio-panel;
+            content: " ";
+            display: block;
+            height: 35px;
+            position: absolute;
+            right: 0;
+            top: -35px;
+            width: calc(50% + -18px);
+            z-index: 2;
+          }
+
+          .panel-link {
+            position: absolute;
+            right: 28%;
+            top: -12px;
+            z-index: 5;
+
+            &:hover {
+              color: $font-red;
+              cursor: pointer;
+            }
+          }
+
+          .panel-zoom {
+            position: absolute;
+            right: 11%;
+            top: -12px;
+            z-index: 5;
+
+            &:hover {
+              color: $font-red;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-button {
+    @include font($raleway-semibold, 15.71px, $font-red);
+    background: $white;
+    border: 1px solid $red;
+    margin-bottom: 50px;
+    padding: 14px 30px;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $red;
+      color: $font-white;
+      cursor: pointer;
+    }
+  }
+}
