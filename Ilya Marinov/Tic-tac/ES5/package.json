@@ -24,7 +24,7 @@
   "author": "Feetvi",
   "license": "ISC",
   "dependencies": {
-    "jquery": "3.3.1",
+    "jquery": "3.5.0",
     "reset-css": "4.0.1"
   }
 }
